@@ -1,0 +1,68 @@
+﻿@model PonosWeb.Models.CourseViewModel
+
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MyTemplate.cshtml";
+}
+
+  <div class="item">
+    <img src="@Url.Content("~/Content/MyTemplate/images/")banner4.png" alt="slider" title="slider" class="img-responsive" />
+    <div class="slide-detail">
+        <div class="container">
+            <div class="slider-caption">
+                <div class="off"></div>
+                <h1>Detail course </h1>
+                <div class="col-md-4 col-sm-4 col-xs-12 paddright">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+   
+    <!-- job start here -->
+    <div id="jobdetail">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12 hidden-xs">
+                    <img src="@Url.Content("~/Content/MyTemplate/images/")p6.png" alt="p6" title="p6" class="img-responsive" />
+                    <div class="left-side">
+                        <ul class="list-unstyled">
+                            
+                        
+                            <li>
+                                <h5>
+                                    <i class="fa fa-shield" aria-hidden="true"></i>
+                                 Nombre de Page
+                                </h5>
+                                <p>@Html.DisplayFor(model => model.nbPage)</p>
+                            </li>
+                            <li>
+                                <h5><i class="fa fa-clock-o" aria-hidden="true"></i> Posted</h5>
+                                <p>@Html.DisplayFor(model => model.dateAjout)</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-sm-8 col-xs-12 paddleft content">
+                    <h1>@Html.DisplayFor(model => model.titre)</h1>
+                  
+                    <h5>Course Description</h5>
+                    
+                        <p> @Html.DisplayFor(model => model.description) </p>
+                   
+               
+                    @*<button type="button" class="btn btn-info" value="Create" onclick="window.location.href='@Url.Action("Create","Reservation", new { id=Model.CourseId})'" >RESERVE</button>*@
+                </div>
+
+              
+                @*<a href="~/Content/Upload/@Model.ImageUrl" class="button" download><i class="fa fa-download"></i>Download file</a>
+
+                @{string path = "~/Content/Upload/" + Model.ImageUrl;}
+                <a href="@Url.Content(path)"  class="button" download><i class="fa fa-download"></i>Download file</a>*@
+            </div>
+        </div>
+    </div>

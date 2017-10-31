@@ -1,0 +1,16 @@
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\bin\Debug\PonosData.dll.config
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\bin\Debug\PonosData.dll
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\bin\Debug\PonosData.pdb
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\bin\Debug\EntityFramework.dll
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\bin\Debug\PonosDomaine.dll
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\bin\Debug\PonosDomaine.pdb
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\bin\Debug\EntityFramework.xml
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\obj\Debug\PonosData.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\obj\Debug\PonosData.dll
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\obj\Debug\PonosData.pdb
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\obj\Debug\PonosData.Migrations.gggggggggggggg.resources
+C:\Users\Lenovo\documents\visual studio 2015\Projects\Ponos\PonosData\obj\Debug\PonosData.csproj.GenerateResource.Cache

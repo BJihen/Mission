@@ -1,0 +1,116 @@
+﻿@model PonosWeb.Models.CourseViewModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_MyTemplate.cshtml";
+}
+
+<div class="item">
+    <img src="@Url.Content("~/Content/MyTemplate/images/")banner4.png" alt="slider" title="slider" class="img-responsive" />
+    <div class="slide-detail">
+        <div class="container">
+            <div class="slider-caption">
+                <div class="off"></div>
+                <h1>Create new course </h1>
+                <div class="col-md-4 col-sm-4 col-xs-12 paddright">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- login start here -->
+<div id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <!-- login-content start here -->
+                <div class="login-content">
+
+                    <ul class="list-inline">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>></li>
+                        <li>
+                            <a href="login.html">Update course</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- login-content end here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+
+
+
+
+<div id="login-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-2 col-md-8 col-sm-8  col-xs-12">
+                <div class="form">
+                    <div class="border"></div>
+                    <div class="border1"></div>
+                    <form class="form-horizontal" method="post">
+                        <fieldset>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <label>Titre</label>
+                                    @Html.EditorFor(model => model.titre, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.titre, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <label>Description</label>
+                                    @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <label>Nombre de pages </label>
+                                    @Html.EditorFor(model => model.nbPage, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.nbPage, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                      
+
+
+
+
+
+
+                            <div class="button">
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Save" class="btn btn-primary btnus" />
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

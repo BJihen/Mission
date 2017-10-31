@@ -1,0 +1,7 @@
+vitesse<-c(850,740,1070,930,850,950,980,980,880,1000,980,930,1050,960,810,1000,1000,960,960)
+vitesse<-vitesse+299000
+*******verifier si la mesur 
+shapiro.test(vitesse)
+
+t.test(vitesse,mu=299000) 
+3)mean(vitesse)

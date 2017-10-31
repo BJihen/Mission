@@ -1,0 +1,174 @@
+﻿@model IEnumerable<PonosWeb.Models.CourseViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MyTemplate.cshtml";
+}
+
+
+
+
+<div class="item">
+    <img src="@Url.Content("~/Content/MyTemplate/images/")banner4.png" alt="slider" title="slider" class="img-responsive" />
+    <div class="slide-detail">
+        <div class="container">
+            <div class="slider-caption">
+                <div class="off"></div>
+                <h1> Course's List </h1>
+                <div class="col-md-4 col-sm-4 col-xs-12 paddright">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jobs start here -->
+<div id="jobs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <!-- about-content start here -->
+                <div class="jobs-content">
+
+                    <ul class="list-inline">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>></li>
+                        <li>
+                            <a href="jobs-detail.html">Courses</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- jobs-content end here -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jobs end here -->
+<p>
+    @Html.ActionLink("Create", "Create", new { @class = "btn btn-success", @style = "color:white" })
+</p>
+
+<div id="contact-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+
+
+
+               
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="color:plum">#</th>
+                                <th style="color:plum">Titre</th>
+                                <th style="color:plum">Description</th>
+                                <th style="color:plum">Nombre de page</th>
+                                <th style="color:plum">Date d'ajout</th>
+                                <th style="color:plum">File</th>
+                            </tr>
+                        </thead>
+
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+
+                                    @Html.DisplayFor(modelItem => item.CourseId)
+                                </td>
+                                <td >
+                                    @Html.DisplayFor(modelItem => item.titre)
+                                </td>
+                                <td style="overflow-x :auto;">
+                                    
+                                        @Html.DisplayFor(modelItem => item.description)
+                                   
+</td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.nbPage)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.dateAjout)
+                                </td>
+                                <td>
+                                    @{string path = "~/Content/Upload/" + item.ImageUrl;}
+                                    @*<img src="@Url.Content(path)" width="50" height="50" />*@
+
+
+                                     @*<form method="get" action="~/Content/Upload/@item.ImageUrl">
+                                        <button type="submit" class="btn btn-default">@item.ImageUrl</button>
+                                    </form>*@
+
+                                    <a href="~/Content/Upload/@item.ImageUrl" class="button" download><i class="fa fa-download"></i>Download file</a>
+
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Details", "Details", new { id = item.CourseId }, htmlAttributes: new { @class = "btn btn-warning", data_toggle = "modal", data_target = "#myModal", @style = "color:white" })
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.CourseId }, new { @class = "btn btn-info", @style = "color:white" })
+
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.CourseId }, new { @class = "btn btn-danger", @style = "color:white", data_toggle = "modal", data_target = "#myModal" })
+                                  
+                                   
+
+
+
+
+                                </td>
+
+
+                                
+
+
+                            </tr>
+
+
+
+                                        }
+                    </table>
+
+                
+                @*<div id="modal"></div>*@
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+
+            <div class="modal-body">
+
+
+              
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script>
+
+
+$(function () {
+    $(".custom-close").on('click', function() {
+        $('#myModal').modal('hide');
+    });
+});</script>

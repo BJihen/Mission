@@ -1,0 +1,58 @@
+sexe: Qualitative nominale 
+niveau: Qualitative ordinale
+FrereEtSoeur: Quantitative discrète
+taille : Quantitative discrète
+
+*****Summary
+summary(data)
+
+****Mediane
+median(data$taille,na.rm=T)
+
+******Ecartype 
+sd(data$taille,na.rm = T)
+
+*******CVAR
+taille2=na.omit(data$taille)
+cvar(taille2)
+
+*********Boite a moustache
+boxplot(data$taille)
+
+******Calculer Quantile 
+quantile(data$age,na.rm = T)
+
+**** representer une variable qualitatif de deux maniére 
+barplot(table(data$UFR))
+pie(table(data$UFR))
+
+****Borne 
+range(db$age) #bornes
+classe1=hist(db$age,breaks = seq(10,75,5),plot = T)
+
+*****Classe Modale
+classeModale=paste(seq="[",classe1$breaks[indice],seq="-",classe1$breaks[indice+1],seq="[") ****tp4,ex2-c
+
+***Modalité
+levels(db$Q5_lieu)
+
+**********effectif et fréquence
+effQ5=table(db$Q5_lieu) #effectif
+freqQ6=effQ6/length(db$Q6_niveau) #fréquence
+
+***Mode
+Mode = names(which.max(data$age))
+
+***** Table de contingence/////////////////////khi-2
+conting=table(db$Q5_lieu,db$Q6_niveau)
+#test de khi deux :relation entre 2 variables qualitatives
+chisq.test(conting)
+#H0:independentes
+#H1:dependentes
+#=>p-value=7.17*10^(-7)<< 0.05
+#on rejette H0
+#on accepte H1 =>Q5_lieu sont relies le niveau de la femme influe lelieu deski
+
+
+res<-hist(sida$taille,breaks=seq(1.60,1.85,0.01),right=T,plot=T)***********
+

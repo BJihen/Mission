@@ -1,0 +1,56 @@
+*****Repertoir
+getwd() :le repertoir courant
+setwd("C:/Users/Noor/Desktop/4DS/R") : modifier le repertoir 
+
+*****Read table
+data=read.table("SIDA2.csv",header=TRUE,sep=";",na.string="")
+
+****Write table
+write.table(Note,file="validation.txt",sep="\t")
+
+***Afficher les noms de colomn
+colnames(irr)   
+names(irr)
+head(irr,2)   #2 lignes au début
+tail(irr,3)   #3lignes àla fin
+?na.fail(irr)  #retourne l'objet s'il ne contient pas de valeurs manquantes
+rename.vars(irr,from=c("Sepal.Length","Species"),to=c("longuer","espèces")) #Changer les noms de colomn 
+
+*****Transformer les variable en factor "qualitatif
+id=as.factor(data$id)
+class(id) #ne change pas dans la base
+data$ï..id=as.factor(data$ï..id) #ça change mnt
+
+*****Ordoner par niveau
+exemple1 : data$niveau=ordered(data$niveau,levels=c('l1','l2','l3','m1','m2'))
+exemple2 :Note2=Note[order(Note$moyenne),]
+exemple3 :pn2=pn[order(pn$BWT),]
+****Data Frame
+ccont=c(11,13,15.5,12,8,9,13,16)
+exam=c(8.5,7,16,9,7,13,14,17)
+moyenne=0.4*ccont+0.6*exam
+Note=data.frame(ccont,exam,moyenne)
+
+****Afficher la ligne qui a max moyenne
+max=Note[which.max(Note$moyenne),]
+
+****Plot
+x=c(10,13,9,17,7,15,11)
+y=c(12,15,11,14,8,18,14)
+plot(x,y,cex=5) #augmenter la taille des points
+plot(x,y,pch=4) #changer forme des pts
+plot(x,y,lwd=0.1) #changer l'epaisseur des pts
+plot(x,y,xlim=c(0,20),ylim=c(0,50)) #definir les  bornes des axes
+plot(x,y,col=2) #couleur des pts
+plot(x,y,main="Notes etudients")
+plot(x,y,cex=5,pch=4,lwd=0.1,xlim=c(0,20),ylim=c(0,50),col=2,main="Notes etudients",xlab="mathématiques",ylab = "physique")
+legend(13,45,"note math et physique")
+points(8,11,cex=5,pch=4,lwd=0.1,col=7) #ajout d'un point de meme caracteristique
+points(10,15)#ajout d'un point par default
+abline(0,1) #une droite d'origine 0 et de pente 1 ya3ni y=x
+
+
+
+
+
+

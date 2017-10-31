@@ -1,0 +1,9 @@
+﻿@model PonosWeb.Models.CourseViewModel
+
+@{string path = "~/Content/MyTemplate/images/" + Model.ImagePath;}
+<div style="float:left; margin:5px;">
+
+    <p>@Model.titre</p>
+    <img  src="@Url.Content(path)" width="50" height="50" />
+
+</div>
